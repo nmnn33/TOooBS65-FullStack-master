@@ -14,6 +14,7 @@ http
     var data =
       "<table border='1'><tr><td>Eka solu</td><td>Toka solu</td></tr><tr><td>Eka solu</td><td>Toka solu</td></tr></table>";
     response.write(data);
+    response.write("<img src='https://wallhaven.cc/w/z8dg9y>'")
 
     response.end("<strong>This is the end</strong>"); //end the response
   })
