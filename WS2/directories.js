@@ -12,8 +12,3 @@ fs.mkdir(path.join(__dirname, 'newdata'), (err) => {
     }
     console.log('Directory created successfully!');
 });
-
-//Delete dir newdata
-fs.rmdir("newdata", () => {
-    console.log("Folder Deleted!");
-});
