@@ -10,17 +10,17 @@ app.use(express.static("public"));
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 // POST /login gets urlencoded bodies
-app.post("/login", urlencodedParser, function(req, res) {
+app.post("./public/login", urlencodedParser, function (req, res) {
   if (!req.body) return res.sendStatus(400);
   console.log(req.body);
   res.send("welcome, " + req.body.name);
 });
 
 // Add data
-app.post("/adduser", urlencodedParser, function(req, res) {
+app.post("/adduser", urlencodedParser, function (req, res) {
   console.log(req.body);
 
-  var data = require("./exampledata.json");
+  var data = require("../exampledata.json");
 
   // Collect the post data and add it to JSON obj
   data.push({
@@ -32,7 +32,7 @@ app.post("/adduser", urlencodedParser, function(req, res) {
   var jsonStr = JSON.stringify(data);
 
   //Write data to a file
-  fs.writeFile("exampledata.json", jsonStr, function(err, data) {
+  fs.writeFile("exampledata.json", jsonStr, function (err, data) {
     if (err) throw err;
     console.log("It's saved!");
   });
@@ -40,8 +40,8 @@ app.post("/adduser", urlencodedParser, function(req, res) {
   res.send(jsonStr);
 });
 
-app.get("/details", function(req, res) {
-  var data = require("./exampledata.json");
+app.get("/details", function (req, res) {
+  var data = require("../exampledata.json");
 
   // Parse the results into a variabke
   var results = '<table border="1"> ';
@@ -60,6 +60,6 @@ app.get("/details", function(req, res) {
 
   res.send(results);
 });
-app.listen(8081, function() {
+app.listen(8081, function () {
   console.log("Example app listening on port 8080!");
 });
