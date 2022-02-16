@@ -5,6 +5,8 @@ var app = express();
 // Require the module required for using form data
 var bodyParser = require("body-parser");
 
+app.use(express.static("./public"));
+
 // create application/x-www-form-urlencoded parser
 app.use(
   bodyParser.urlencoded({

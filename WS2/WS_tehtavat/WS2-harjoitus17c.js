@@ -28,4 +28,4 @@ http.createServer(function (req, res) {
     res.write(data);
     res.end(); //HTTP vastaus päättyy
 })
-    .listen(8081); //the server object listens on port 8081
+    .listen(8081);

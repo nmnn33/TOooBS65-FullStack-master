@@ -78,15 +78,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 // Route for form sending the POST data
 
-/*app.post('/adduser', function (req, res) {
-  var data;
-  data += req.body.name;
-  data += req.body.email;
-  data += req.body.company;
-  console.log(data);
-  res.send(data);
-});*/
-
 app.post("/adduser", function (req, res) {
   // Load the existing data from a file
   var data = require(__dirname + "/data/exampledata2.json");

@@ -5,10 +5,10 @@ var app = express();
 // Serve static files from the "public" directory
 app.use(express.static("./public"));
 
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
     res.sendFile('/public/index.html');
 });
-
+*/
 app.get('/details', function (req, res) {
 
     var data = require(__dirname + '/data/exampledata2.json');

@@ -2,7 +2,7 @@ var fs = require("fs");
 
 const path = require('path');
 
-fs.mkdir(path.join(__dirname, 'test'), (err) => {
+fs.mkdirSync(path.join(__dirname, 'test'), (err) => {
     if (err) {
         return console.error(err);
     }
