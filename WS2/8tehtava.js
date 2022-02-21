@@ -23,7 +23,7 @@ http
             response.write(sivu);
         }
         else if (request.url === "/json") {
-            response.writeHead(200, { "Content-Type": "application/json" });
+            response.writeHead(200, { "Content-Type": "text/json: charset-UTF-8" });
             var json = require("./data.json");
             console.log(json[0].name);
             response.write(JSON.stringify(json));

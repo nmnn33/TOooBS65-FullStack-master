@@ -1,18 +1,18 @@
 var http = require('http');
 var axios = require("axios");
-const server = http.createServer(function (request, respose) {
+const server = http.createServer(function (request, response) {
   axios
     .get("http://www.omdbapi.com/?s=star+wars&apikey=cbbc6750")
     .then(res => {
-       const body = parse(res.data)
-       response.writeHead(200, { 'content-type': 'text/html' })
-       response.end(body);
+      const body = parse(res.data)
+      response.writeHead(200, { 'content-type': 'text/html' })
+      response.end(body);
     })
     .catch(err => {
-       // Handle error if axios fetching fails
-       response.writeHead(500, { 'content-type': 'text/plain' })
-       response.end('Internal Server Error')
-     })
+      // Handle error if axios fetching fails
+      response.writeHead(500, { 'content-type': 'text/plain' })
+      response.end('Internal Server Error')
+    })
 })
 
 server.listen(8081, err => {

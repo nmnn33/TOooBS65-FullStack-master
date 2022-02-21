@@ -61,7 +61,14 @@ app.get("/details", function (req, res) {
       "<td>" +
       data[i].Email +
       "</td>" +
+      "<td>" +
+      data[i].Company +
+      "</td>" +
+      "<td>" +
+      data[i].Date +
+      "</td>" +
       "</tr>";
+
   }
 
   res.send(results);

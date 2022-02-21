@@ -5,7 +5,8 @@ var app = express();
 // Serve static files from the "public" directory
 app.use(express.static("./public"));
 
-/*app.get('/', function (req, res) {
+/*Ei tarvitse tätä näyttääkseen index.html
+app.get('/', function (req, res) {
     res.sendFile('/public/index.html');
 });
 */

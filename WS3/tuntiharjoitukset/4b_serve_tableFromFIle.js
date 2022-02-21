@@ -4,7 +4,7 @@ var app = express();
 
 app.get('/', function (req, res) {
    res.sendFile(__dirname + '/public/index.html');
-   //   console.log("Polku: " + __dirname);
+   console.log("Polku: " + __dirname);
 
 });
 
