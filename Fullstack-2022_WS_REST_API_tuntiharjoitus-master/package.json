@@ -1,0 +1,14 @@
+{
+  "name": "ws_rest_api_tuntidemo",
+  "version": "1.0.0",
+  "description": "REST API tuntidemo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JariKovis",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.2.10"
+  }
+}

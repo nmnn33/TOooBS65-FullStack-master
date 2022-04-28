@@ -1,33 +1,40 @@
 <!-- views/pages/index.ejs -->
-<% var heading="New heading"; %>
-<% var content="New content"; %>
+<% var heading="New heading" ; %>
+    <% var content="New content" ; %>
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <% include ../partials/head %>
-</head>
-<body class="container">
+        <!DOCTYPE html>
+        <html lang="en">
 
-    <header>
-        <% include ../partials/header %>
-    </header>
+        <head>
+            <% include ./partials/head %>
+        </head>
 
-    <main>
-        <div class="jumbotron">
-            <h1><%= heading %> </h1>
-            <p> <%= content %> </p>
+        <body class="container">
+
+            <header>
+                <% include ./partials/header %>
+            </header>
+
+            <main>
+                <div class="jumbotron">
+                    <h1>
+                        <%= heading %>
+                    </h1>
+                    <p>
+                        <%= content %>
+                    </p>
 
 
-          <img src="img/mean.jpg" />
-        </div>
-    </main>
+                    <img src="img/mean.jpg" />
+                </div>
+            </main>
 
-    <footer>
-        <% include ../partials/footer %>
-    </footer>
+            <footer>
+                <% include ../partials/footer %>
+            </footer>
 
-</body>
-</html>
+        </body>
+
+        </html>
